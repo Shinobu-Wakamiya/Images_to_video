@@ -1,0 +1,6 @@
+import numpy as np    
+C = []  
+for i in range (1,15):
+    C.append(np.loadtxt('lambda_surfaceVsTime'+str(i)+'.txt'))  
+
+np.savetxt('lambda_surfaceVsTime.txt',np.average(C,axis=0),fmt='%18.12lf')  
